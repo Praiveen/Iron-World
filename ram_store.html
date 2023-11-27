@@ -22,7 +22,6 @@
         <div>
             <a href="#Topic1">
                 <img src="pict/circle-arrow-up-svgrepo-com.svg">
-
             </a>
         </div>
     </div>
@@ -52,7 +51,8 @@
                     <a href="#">Конфигуратор</a>
                     <a href="#">О сайте</a>
                     <a href="contacts.html">Контакты</a>
-                    <a id="loginButton" onclick="enterForm() " href="#">Войти</a> 
+
+                    <a onclick="enterForm()" href="#">Войти</a> 
                 </div>                
             </div>
         </nav>
@@ -79,7 +79,7 @@
                         <li class="menu-item-main"><a href="#">Комлектущие</a>
                             <ul class="navigation">
                                 <li class="menu-item"><a href="#">Материнские платы</a></li>
-                                <li class="menu-item"><a href="#">Видеокарты</a></li>
+                                <li class="menu-item"><a href="gpu_store.html">Видеокарты</a></li>
                                 <li class="menu-item"><a href="#">Процессоры</a></li>
                                 <li class="menu-item"><a href="#">ОЗУ</a></li>
                                 <li class="menu-item"><a href="#">ПЗУ</a></li>
@@ -102,83 +102,142 @@
             </section>
             <section class="gallery-flex">
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/4090.png" alt="">
+                    <img class="product-img" src="pict/ram/xpg.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name"> GIGABYTE GeForce RTX 4090</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">150000 ₽</p>
+                        <h1 class="product-name">ADATA 16Gb (2x8Gb) XPG SPECTRIX D50 RGB</h1>
+                        <p class="product-ttx">
+                            Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: DIMM 288-контактный <br> 
+                        Тактовая частота: 3200 МГц <br>
+                        Пропускная способность: 25600 Мб/с <br>
+                        Латентность: CL16 <br>
+                        Тайминги: 16-20-20 </p>
+                        <p class="product-price">5400 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/4080.png" alt="">
+                    <img class="product-img" src="pict/ram/amd.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">MSI GeForce RTX 4080 GAMING X TRIO 16G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">120000 ₽</p>
+                        <h1 class="product-name">AMD 16Gb R7 Performance Series Black</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: DIMM 288-контактный <br> 
+                        Тактовая частота: 2133 МГц <br>
+                        Пропускная способность: 17000 Мб/с <br>
+                        Латентность: CL15 <br>
+                        Тайминги: 15-15-15-36 
+                        </p> 
+                        <p class="product-price">2800 ₽</p>
+                        <button type="button" data-action="add-to-cart">Купить</button>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img class="product-img" src="pict/ram/sams.png" alt="">
+                    <div class="caption">
+                        <h1 class="product-name">SAMSUNG DDR4 8Gb 3200MHz pc-25600 оем</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: DIMM 288-контактный <br>
+                        Тактовая частота: 3200 МГц <br>
+                        Пропускная способность: 25600 Мб/с <br>
+                        Латентность: CL22 <br>
+                        Подсветка: нет </p>
+                        <p class="product-price">2000 ₽</p>
+                        <button type="button" data-action="add-to-cart">Купить</button>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img class="product-img" src="pict/ram/impactn.png" alt="">
+                    <div class="caption">
+                        <h1 class="product-name">Kingston SO-DIMM 16G FURY Impact Black</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: SODIMM 260-контактный <br>
+                        Тактовая частота: 3200 МГц <br>
+                        Пропускная способность: 26000 Мб/с <br>
+                        Латентность: CL20 <br>
+                        Подсветка: нет 
+                        </p>
+                        <p class="product-price">4000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>  
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/4070.png" alt="">
+                    <img class="product-img" src="pict/ram/patr.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">PALIT GeForce RTX 4070 DUAL 12G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">70000 ₽</p>
+                        <h1 class="product-name">Patriot DDR4 8Gb PSD48G240081</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: DIMM 288-контактный <br> 
+                        Тактовая частота: 2400 МГц <br>
+                        Пропускная способность: 19200 Мб/с <br>
+                        Латентность: CL17 <br>
+                        Подсветка: нет </p>
+                        <p class="product-price">1800 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/4060.png" alt="">
+                    <img class="product-img" src="pict/ram/cors.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">ASUS GeForce RTX 4060 Ti GAMING OC 8G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">60000 ₽</p>
+                        <h1 class="product-name">Corsair 32Gb (2x16Gb) Vengeance RGB Pro</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: DIMM 288-контактный <br>
+                        Тактовая частота: 3200 МГц <br>
+                        Пропускная способность: 25600 Мб/с <br>
+                        Латентность: CL16 <br>
+                        Подсветка: RGB </p>
+                        <p class="product-price">9000 ₽</p>
+                        <button type="button" data-action="add-to-cart">Купить</button>
+                    </div>
+                </div>
+                
+                
+                <div class="img-container">
+                    <img class="product-img" src="pict/ram/micro.png" alt="">
+                    <div class="caption">
+                        <h1 class="product-name">Crucial SO-DIMM 16Gb CT16G4SFRA32A</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR4 <br>
+                        Форм-фактор: SODIMM 260-контактный <br>
+                        Тактовая частота: 3200 МГц <br>
+                        Пропускная способность: 25600 Мб/с <br>
+                        Латентность: CL21 <br>
+                        Подсветка: нет</p>
+                        <p class="product-price">3500 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/3080.png" alt="">
+                    <img class="product-img" src="pict/ram/fury.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">PALIT GeForce RTX 3080 Ti GAMEROCK 12G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">140000 ₽</p>
+                        <h1 class="product-name">Kingston DDR5 32Gb (2x16Gb) FURY Beast</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Тип памяти: DDR5 <br>
+                        Форм-фактор: DIMM 288-контактный <br>
+                        Тактовая частота: 5600 МГц <br>
+                        Пропускная способность: 44800 Мб/с <br>
+                        Латентность: CL40 <br>
+                        Подсветка: нет </p>
+                        <p class="product-price">13000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
                 <div class="img-container">
-                    <img class="product-img" src="pict/gpu/3070.png" alt="">
+                    <img class="product-img" src="pict/ram/furyrgn.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">MSI GeForce RTX 3070 VENTUS 3X PLUS OC 8G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">70000 ₽</p>
-                        <button type="button" data-action="add-to-cart">Купить</button>
-                    </div>
-                </div>
-                <div class="img-container">
-                    <img class="product-img" src="pict/gpu/3060.png" alt="">
-                    <div class="caption">
-                        <h1 class="product-name">Palit GeForce RTX 3060 Ti Dual OC 8G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">45000 ₽</p>
-                        <button type="button" data-action="add-to-cart">Купить</button>
-                    </div>
-                </div>
-                <div class="img-container">
-                    <img class="product-img" src="pict/gpu/2060.png" alt="">
-                    <div class="caption">
-                        <h1 class="product-name">SINOTEX GeForce RTX 2060 NINJА 6G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">27000 ₽</p>
-                        <button type="button" data-action="add-to-cart">Купить</button>
-                    </div>
-                </div>
-                <div class="img-container">
-                    <img class="product-img" src="pict/gpu/rx580.png" alt="">
-                    <div class="caption">
-                        <h1 class="product-name">MLLSE AMD RX 580 8 ГБ 2048SP</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">6000 ₽</p>
+                        <h1 class="product-name">KINGSTON FURY Renegade RGB 16GB x2</h1>
+                        <p class="product-ttx">Характеристики
+                        Тип памяти: DDR5  <br>
+                        Форм-фактор: DIMM 288-контактный <br>
+                        Тактовая частота: 6400 МГц <br>
+                        Пропускная способность: 51200 Мб/с <br>
+                        Латентность: CL32 <br>
+                        Подсветка: RGB</p>
+                        <p class="product-price">17000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
@@ -238,17 +297,17 @@
                     <form id="login" class="modal-form">
                         <h1>Вход</h1>
                         <div>
-                            <input id="emailInput" type="email" name="Почту" placeholder="Введите почту" />
+                            <input type="email" name="Почту" placeholder="Введите почту" />
                         </div>
                         <div>
-                            <input id="passwordInput" type="password" name="пароль" placeholder="Введите пароль">
+                            <input type="password" name="пароль" placeholder="Введите пароль">
                         </div>
                         <div style="display: flow">
-                            <button id="enterButton">Войти</button>
+                            <button type="submit" onclick="task2()">Войти</button>
                         </div>
                         <div class="register-form">
                             <p>Нет учетной записи?</p>
-                            <button type="submit" >Зарегестрироваться</button>
+                            <button type="submit" onclick="task1()">Зарегестрироваться</button>
                         </div>
                     </form>
                 </div>
@@ -346,7 +405,7 @@
                     <h1>Контакты</h1>
                     <div class="inline-tel">
                       <img src="pict/phone-svgrepo-com.svg">
-                      <a href=”tel:+79998887766”>+7(999)888-77-66</a>
+                      <a href=”tel: +79998887766”>+7(999)888-77-66</a>
                     </div>
                     <div class="inline-tel">
                       <img src="pict/location-pin-alt-svgrepo-com.svg">
@@ -363,5 +422,4 @@
 <script src="java/main.js"></script>
 <script src="java/tab.js"></script>
 <script src="java/user_enter.js"></script>
-
 </html>

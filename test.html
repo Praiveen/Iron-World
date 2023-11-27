@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Уведомления</title>
+   <style>
+       .notification {
+           padding: 20px;
+           background-color: #f44336; /* Red */
+           color: white;
+           margin-bottom: 15px;
+       }
+   </style>
+</head>
+<body>
+   <div id="notificationContainer"></div>
+
+   <script>
+       let counter = 0;
+
+       setInterval(function() {
+           counter++;
+           let notificationElement = document.createElement('div');
+           notificationElement.className = 'notification';
+           notificationElement.textContent = `Уведомление ${counter}`;
+           document.getElementById('notificationContainer').appendChild(notificationElement);
+       }, 3000);
+   </script>
+</body>
+</html>
