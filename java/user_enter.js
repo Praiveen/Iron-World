@@ -30,7 +30,7 @@ let users = [
 	},
 ];
 
-//localStorage.setItem('users', JSON.stringify(users));
+localStorage.setItem('users', JSON.stringify(users));
 
 
 // Функция для обработки входа в систему
