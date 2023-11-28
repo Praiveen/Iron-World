@@ -9,6 +9,8 @@ if (localStorage.getItem('loggedIn') === 'true') {
 
 //var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
+var flagEnter = 0;
+
 let users = [
  {email: 'user1@example.com', password: 'pass1', phone: '',
 	name: '',
@@ -30,7 +32,10 @@ let users = [
 	},
 ];
 
-localStorage.setItem('users', JSON.stringify(users));
+if (flagEnter === 0) {
+	localStorage.setItem('users', JSON.stringify(users));
+	flagEnter = 1;
+}
 
 
 // Функция для обработки входа в систему
