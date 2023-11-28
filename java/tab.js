@@ -41,6 +41,15 @@ function callForm() {
     }
 }
 
+function registrationForm() {
+    if (document.getElementById("register-modal").style.display == "none") {
+        document.getElementById("register-modal").style.display = "block";
+        document.getElementById("enter-modal").style.display = "none";
+    } else {
+        document.getElementById("register-modal").style.display = "none";
+    }
+}
+
 var what_need = 1;
 function RandomString(length) {
     let result = '';

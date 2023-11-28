@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
  </head>
- <body id="Topic1">
+ <body onload="ttxUser()" id="Topic1">
     <!-- <div class="MainFixedNotification"></div> -->
     <div class="feedback">
         <div>
@@ -53,7 +53,7 @@
                     <a href="index.html">Главная</a>
                     <a href="#">Блог</a>
                     <a href="#">Конфигуратор</a>
-                    <a href="#">О сайте</a>
+                    <a  href="#">О сайте</a>
                     <a href="contacts.html">Контакты</a>
                     <a id="loginButton" onclick="enterForm() " href="#">Войти</a> 
                 </div>                
@@ -74,10 +74,69 @@
     </aside>
     <main class="base-container">
         <article> 
-            <section>
-                <button id="outButton" onclick="window.location.href='index.html';">
-                    выход из акка
-                </button>
+            <section class="user_page">
+                <form>
+                    <div>
+                        <div class="form-group">
+                            <h2>Информация о пользователе</h2>
+                            <label for="email">Email</label>
+                            <input type="email" id="emailInput" name="email" value="" placeholder="Добавьте почту">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="first_name">Имя</label>
+                            <input type="text" id="nameInput" name="first_name" value="" placeholder="Добавьте свое имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Фамилия</label>
+                            <input type="text" id="surnameInput" name="last_name" value="" placeholder="Добавьте свою фамилию">
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname">Никнейм</label>
+                            <input type="text" id="nicknameInput" name="nickname" value="" placeholder="Добавьте свой никнейм">
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <h2>Информационные сообщения</h2>
+                            <div class="checkbox-group-text">
+                                <div>
+                                    <input type="checkbox" id="field1Input" /><label for="field1Input">d</label>
+                                </div>
+                                <p>Получать информационные сообщения на E-mail</p>
+                            </div>
+                            <div class="checkbox-group-text">
+                                <div>
+                                    <input type="checkbox" id="field2Input" /><label for="field2Input">d</label>
+                                </div>
+                            <p>Получать информационные сообщения клуба на E-mail</p>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <h2>Скидки и предложения</h2>
+                            <div class="checkbox-group-text">
+                                <div>
+                                    <input type="checkbox" id="field3Input" /><label for="field3Input">d</label>
+                                </div>
+                                
+                                <p>Получать информацию о скидках, новинках и выгодных предложениях по смс</p>
+                            </div>
+                            <div class="checkbox-group-text">
+                                <div>
+                                    <input type="checkbox" id="field4Input" /><label for="field4Input">d</label>
+                                </div>
+                                <p>Получать информацию о скидках, новинках и выгодных предложениях по E-mail (в том числе, о снижении цен и появлении акций на товары в списках избранного)</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <button id="saveButton">Обновить данные
+                    </div>             
+                </form>
+                <div class="outButtonBlock">
+                   <button id="outButton" onclick="window.location.href='index.html';">Выйти из аккаунта</button> 
+                </div>
+                
             </section>
         </article>
 
@@ -145,7 +204,31 @@
                         </div>
                         <div class="register-form">
                             <p>Нет учетной записи?</p>
-                            <button type="submit" >Зарегестрироваться</button>
+                            <button onclick="registrationForm()" type="submit" >Зарегестрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="register-modal" style="display: none;">
+            <div onclick="registrationForm()" class="modal-blur"></div>
+            <div class="modal-container">
+                <div class="modal-block">
+                    <div onclick="enterForm()" class="modal-close"> 
+                        <img src="pict/krest.svg"> 
+                    </div>
+                    <form id="login" class="modal-form">
+                        <h1>Входsssssss</h1>
+                        <div>
+                            <input id="emailInput" type="email" name="Почту" placeholder="Введите почту" />
+                        </div>
+                        <div>
+                            <input id="passwordInput" type="password" name="пароль" placeholder="Введите пароль">
+                        </div>
+                        <div style="display: flow">
+                            <button id="enterButton">Зарегестрироваться</button>
                         </div>
                     </form>
                 </div>
