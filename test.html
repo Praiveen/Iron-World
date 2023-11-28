@@ -3,16 +3,107 @@
 <head>
    <title>Уведомления</title>
    <style>
-       .notification {
-           padding: 20px;
-           background-color: #f44336; /* Red */
-           color: white;
-           margin-bottom: 15px;
-       }
-   </style>
+           .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select {
+        width: 100%;
+        padding: 7px 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .form-group input[type="submit"] {
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>
 </head>
 <body>
-   <div id="notificationContainer"></div>
+       <form action="/update_profile" method="post">
+        <div class="section">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" value="">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="">
+            </div>
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" value="">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" value="">
+            </div>
+            <div class="form-group">
+                <label for="nickname">Nickname</label>
+                <input type="text" id="nickname" name="nickname" value="">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Date of Birth</h2>
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" value="">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Password</h2>
+            <div class="form-group">
+                <label for="password">New Password</label>
+                <input type="password" id="password" name="password" value="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Update Profile">
+        </div>
+    </form>
+</div>
 
    <script>
        let counter = 0;

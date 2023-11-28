@@ -557,39 +557,9 @@ nav{
 	height: 35px;
 }
 
-@media (max-width: 800px){
-	.feedback{
-		right: 12px;
-		bottom: 15px;
-		width: 25px;
-		height: 25px;
-		padding: 5px 5px;
-	}
-	.feedback img{
-		width: 25px;
-		height: 25px;
-	}
-}
 
-/*@keyframes notif{
-	from{
-		width: 35px;
-		height: 35px;
-		background: #97FFBA;
-		border-radius: 50px;
-		padding: 10px;
-	}
-	to{
-		text-align: start;
-		width: 250px;
-		height: 300px;
-		background-color: white;
-		border-radius: 10px;
-		padding: 10px;
-		right: 35px;
-		bottom: 45px;
-	}
-}*/
+
+
 
 .notif-osnova{
 	position: fixed;
@@ -599,7 +569,6 @@ nav{
 }
 
 .notification{
-	z-index: ;
 
 	width: 35px;
 	height: 35px;
@@ -618,6 +587,7 @@ nav{
 .logo-notif{
 	margin-bottom: 20px;
 	position: relative;
+	width: 35px;
 }
 
 .notif-total{
@@ -648,7 +618,33 @@ nav{
 	overflow-y: auto;
 }
 
+@media (max-width: 800px){
+	.feedback{
+		right: 25px;
+		bottom: 70px;
+		width: 25px;
+		height: 25px;
+		padding: 5px 5px;
+	}
+	.feedback img{
+		width: 25px;
+		height: 25px;
+	}
+	.notif-osnova{
+		right: 25px;
+		bottom: 20px;
+	}
+	.notification{
+		width: 25px;
+		height: 25px;
+		padding: 5px 5px;
+	}
+	.logo-notif{
+		width: 25px;
+		height: 25px;
+	}
 
+}
 /*ОСНОВНОЙ КОНТЕНТ*/
 
 .news{
@@ -763,6 +759,13 @@ nav{
   background: linear-gradient(#4e5054, grey);
   grid-column: 14 / span 3;
 }
+
+@media (max-width: 800px){
+	.video-panel{
+		grid-column: 1 / span 16;
+	}
+}
+
 
 
 /*МОДАЛ ОКНО ОТЗЫВЫ*/
@@ -1343,11 +1346,13 @@ footer{
 .storage
 {
 	width: 500px;
+
 	background: white;
 	position: absolute;
 	top: 49px;
 	right: 0;
 	z-index: 10;
+
 }
 
 
@@ -1392,8 +1397,12 @@ footer{
 	background-color: red;
 }
 
+.cart{
+	height: 450px;
+	overflow-y: auto;
+}
 
-.Capch-base{
+/*.Capch-base{
 	margin: 20px;
 		display: flex;
 		justify-content: center;
@@ -1407,7 +1416,7 @@ footer{
 		background: white;
 		color: black;
 }
-
+*/
 
 @media (max-width: 800px){
 	.cart-img-block{
@@ -1419,13 +1428,16 @@ footer{
 		justify-content: space-between;
 		align-items: center;
 	}
+	.storage{
+		width: 350px;
+	}
 	
 }
 
 
 .img-container{
 	position: relative;
-	height: 500px;
+	height: 530px;
 	width: 100%;
 	left: 0;
 	overflow: hidden;
@@ -1456,7 +1468,7 @@ footer{
 
 .img-container .caption{
   width: 98%;
-  height: 220px;
+  height: 250px;
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -1477,6 +1489,7 @@ footer{
  
 .img-container .caption .product-ttx{
 	font-size: 13px;
+	height: 136px;
 }
 .img-container .caption button{
 	cursor: pointer;
@@ -1503,6 +1516,9 @@ footer{
 @media (max-width: 800px){
 	.gallery-transform{
 		grid-column: 1 / span 16;
+	}
+	.img-container .caption .product-price{
+		font-size: 15px;
 	}
 }
 
