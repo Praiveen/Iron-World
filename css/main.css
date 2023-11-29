@@ -827,7 +827,9 @@ nav{
 	top: 50%;
 	transform: translate(0, -50%);
 	margin: auto auto auto auto;
-	max-width: 30vw;
+/*	max-width: 60vw;*/
+ width: clamp(17rem, 40vw, 35rem);
+/*	width: clamp(10rem, 15rem, 40rem);*/
 
 	transition: opacity 0.3s ease;
 }
@@ -839,120 +841,11 @@ nav{
 
 }
 
-.modal-block h1{
-
-}
-
-.modal-container-bonus{
-	position: relative;
-	top: -8vw;
-	margin: 10% auto;
-	transition: opacity 0.3s ease;
-	width: 70%;
-}
-
-
 .modal-form{
 	padding: 20px;
 	text-align: center;
 }
 
-.grid-modal-enter{
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 30px;
-	gap: 30px;
-}
-
-.grid-modal-enter .grid-input{
-	position: relative;
-	width: 100%;
-
-}
-
-.modal-container-bonus .modal-form input[type=email], 
-.modal-container-bonus .modal-form input[type=text],
-.modal-container-bonus .modal-form input[type=tel]{
-	width: 80%;
-	margin: 0 auto;
-	border: none;
-	border-bottom: solid 2px blue;
-	padding: 24px;
-	margin-top: 24px;
-	color: #000;
-	transition: 0.3s;
-	font-size: 15px;
-}
-
-.modal-container-bonus .modal-form input{
-	transition: 0.3s;
-}
-
-.modal-container-bonus .modal-form textarea{
-	width: 92%;
-	font-size: 15px;
-	border: none;
-	border-bottom: solid 2px blue;
-	margin: 0 auto;
-	margin-top: 25px;
-	color: #000;
-	transition: 0.3s;
-	padding: 24px;
-}
-
-
-
-.grid-modal-enter .grid-input input:hover,
-.grid-modal-enter .grid-input input:valid,
-.grid-modal-enter .grid-input textarea:hover,
-.grid-modal-enter .grid-input textarea:valid{
-	background: lightgrey;
-}
-
-.grid-modal-enter .grid-input label{
-	position: absolute;
-	top: 60%;
-	left: 7%;
-	color: black;
-	padding: 0;
-	/*padding: 24px;
-	padding-left: 40px;
-	padding-top: 40px;*/
-	transition: 0.3s;
-	z-index: 1;
-}
-
-.grid-modal-enter .grid-input textarea ~ label{
-	top: 60%;
-	left: 3%;
-}
-
-/*.modal-radio input{
-	font-size: calc(0.1em + 1vw);
-	height: calc(0.1em + 1vw);
-	width: 5%;
-}*/
-
-.grid-modal-enter .grid-input input:hover ~ label,
-.grid-modal-enter .grid-input input:valid ~ label,
-.grid-modal-enter .grid-input textarea:hover ~ label,
-.grid-modal-enter .grid-input textarea:valid ~ label{
-	top: 30%;
-}
-
-@media (max-width: 800px){
-	.modal-container-bonus .modal-form textarea{
-		width: 80%;
-	}
-
-	.grid-modal-enter .grid-input input:hover ~ label,
-	.grid-modal-enter .grid-input input:valid ~ label,
-	.grid-modal-enter .grid-input textarea:hover ~ label,
-	.grid-modal-enter .grid-input textarea:valid ~ label{
-	top: 25%;
-	}
-}
 
 
 .modal-container .modal-form textarea{
@@ -973,11 +866,11 @@ nav{
 	margin: 0 auto;
 
 	border: 1px solid #eee;
-	border-radius: calc(0.1em + 1vw);
-	padding: calc(0.1em + 1vw);
-	margin-top: calc(0.1em + 1vw);
+	border-radius: clamp(0.8rem, 2vw, 1rem);
+	padding: clamp(0.8rem, 2vw, 1.2rem);
+	margin-top: clamp(0.8rem, 2vw, 1.2rem);
 	color: #000;
-	height: calc(0.1em + 1vw);
+	height: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .time{
@@ -1023,14 +916,14 @@ nav{
 
 .modal-form button {
 	text-align: center;
-	font-size: 15px;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
 
 	background-color: #13315A;
 	color: #FFF;
-	border-radius: calc(0.1em + 1vw);
+	border-radius: clamp(0.6rem, 2vw, 0.8rem);
 	border: none;
 
-	width: 150px;
+	width: clamp(10rem, 20vw, 15rem);
   height: 50px;
   margin: 0 auto;
   padding: 0;
@@ -1068,7 +961,9 @@ nav{
 ::placeholder{
 	color: #4761e5;
  	text-overflow:ellipsis;
- 	font-size: 1.3em;
+ 	
+ 	font-size: clamp(0.8rem, 2vw, 1.5rem);
+
 }
 
  .input-file {
@@ -1077,15 +972,15 @@ nav{
 } 
 
 @media (max-width: 800px) {
-	.modal-form button {
+	/*.modal-form button {
 		font-size: 0.6em
-	}
+	}*/
 	.modal-form p{
 		font-size: 0.6em
 	}
-	::placeholder{
-	 	font-size: 0.6em;
-	 }
+	/*::placeholder{
+	 	font-size: 0.8em;
+	 }*/
 }
 
 /*2222222222222222222222222222222222222222222222222222222222*/

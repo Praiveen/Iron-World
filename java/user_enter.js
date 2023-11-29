@@ -32,10 +32,10 @@ let users = [
 	},
 ];
 
-if (flagEnter === 0) {
-	localStorage.setItem('users', JSON.stringify(users));
-	flagEnter = 1;
-}
+// if (flagEnter === 0) {
+// 	localStorage.setItem('users', JSON.stringify(users));
+// 	flagEnter = 1;
+// }
 
 
 // Функция для обработки входа в систему
