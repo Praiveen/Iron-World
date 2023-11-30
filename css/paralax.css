@@ -1,0 +1,112 @@
+body, html {
+  height: 250%;
+  margin: 0;
+}
+
+#parallax {
+ position: relative;
+ background-position: center;
+ background-size: cover;
+
+ background-attachment: fixed;
+ height: 100%;
+}
+
+.content{
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 5px 10px 10px green;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+
+.content h1{
+  color: white;
+  font-size: 3rem;
+}
+
+.content p{
+  color: white;
+  font-size: 2rem;
+}
+
+.content a{
+  width: 860px;
+  height: 60px;
+  border-radius: 3px;
+  border: white;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(33,212,96,1) 0%, rgba(0,212,255,1) 100%);
+  color: black;
+  font-size: 2rem;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.content1 {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  text-align: center;
+  opacity: 1;
+}
+
+.content2 {
+  width: 900px;
+  height: 750px;
+  position: absolute;
+  top: 25%;
+  left: 65%;
+  text-align: center;
+}
+
+
+
+.content3 {
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  top: 43%;
+  left: 30%;
+  text-align: center;
+}
+
+.content4 {
+  width: 800px;
+  height: 740px;
+  position: absolute;
+  top: 64%;
+  left: 60%;
+  text-align: center;
+}
+
+.content2 img, .content4 img{
+  width: 100%;
+}
+
+
+.content5 {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 83%;
+  left: 30%;
+  text-align: center;
+}
+
+.content6 {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  text-align: center;
+}

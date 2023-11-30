@@ -35,6 +35,9 @@
         </div>
     </div>
     
+    <div id="outer" style="display: none;">
+        <img id="inner" src="pict/gpu/4090.png" />
+    </div>
 
     <header>
         <nav>
@@ -52,7 +55,7 @@
                     <a href="index.html">Главная</a>
                     <a href="#">Блог</a>
                     <a href="pc_recomendation.html">Лучшие сборки</a>
-                    <a href="#">О сайте</a>
+                    <a href="about.html">О сайте</a>
                     <a href="contacts.html">Контакты</a>
                     <a id="loginButton" onclick="enterForm() " href="#">Войти</a> 
                 </div>                
@@ -76,6 +79,12 @@
     </aside>
     <main class="base-container">
         <article> 
+            <section class="Capch-base">
+                <div class="capch-block">
+                    <button id="photoOnPage">Вызов фотки</button>
+                    <p  id="clickPosition"></p>
+                </div>
+            </section>
             <section class="window-tabs">
                 <div class="window-1">
                     <div>
@@ -178,6 +187,7 @@
                 </div>
                 
             </section>
+
         </article>
 
         <div id="call-modal" style="display: none;">
@@ -317,7 +327,7 @@
             </div>
         </div>
     </main>
-    <aside class="video-panel">
+    <aside class="video-panel" id="video-panel">
             <h3>Интересное</h3>
             <!-- <iframe width="230" src="https://www.youtube.com/embed/x2stZoKpSbA?si=2Kz2uid920uEDavQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe width="230" src="https://www.youtube.com/embed/UWqD8wz6lE4?si=bKDNtVrYFVJ_Kt6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -390,6 +400,7 @@
 <script src="java/main.js"></script>
 <script src="java/tab.js"></script>
 <script src="java/12p.js"></script>
+<script src="java/13p.js"></script>
 <script src="java/user_enter.js"></script>
 <script src="java/UserReg.js"></script>
 </html>

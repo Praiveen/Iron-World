@@ -9,7 +9,7 @@ if (localStorage.getItem('loggedIn') === 'true') {
 
 //var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-var flagEnter = 0;
+
 
 let users = [
  {email: 'user1@example.com', password: 'pass1', phone: '',
@@ -45,12 +45,25 @@ function handleLogin() {
 	var password = document.getElementById('passwordInput').value;
 
 	var user = users.find(function(user) {
+	   var currentUser = user;
 	   return user.email === email && user.password === password;
 	 });
-
-	var currentUser = users.find(function(user) {
-	   return user;
+	var dop = users.find(function(user) {
+		if (user.email === email) {
+			var currentUser = user;
+		}
+	   	
 	 });
+	// for (var i = 0; i <= users.length; i++) {
+	// 	if (user[i].email === email) {
+	// 		alert(1);
+	// 		var currentUser = user[i];
+	// 	}
+	// }
+	var currentUser = users[0];
+	/*var currentUser = users.find(function(user) {
+	   return user;
+	 });*/
 
 	if (user) {
 	   localStorage.setItem('loggedIn', 'true');
@@ -122,43 +135,4 @@ var saveButton = document.getElementById("saveButton");
 
 // Добавляем обработчик события на кнопку
 saveButton.addEventListener('click', saveChanges);
-
-/*function registrationUser(){
-	alert(1);
-	let users = JSON.parse(localStorage.getItem('users'));
-
-	let emailReg = document.getElementById("emailInputRegistr").value;
-	let pass1 = document.getElementById("passwordInputRegistr1").value;
-	let pass2 = document.getElementById("passwordInputRegistr2").value;
-	alert(1);
-	if(pass1 != pass2){
-		alert("Пароли не совпадают!");
-		return;
-	}
-
-	for (let user of users) {
-		if (user.email === emailReg) {
-		 	alert("Пользователь с такой почтой уже есть");
-		 	return;
-		}
-	}
-	let user = {email: emailReg, password: pass1,
-		name: '',
-		surname: '',
-		nickname: '',
-		field1: true,
-	   	field2: false,
-	   	field3: true,
-	   	field4: false
-	};
-	users.push(user);
-	localStorage.setItem('users', JSON.stringify(users));
-	localStorage.setItem('loggedIn', 'true');
-	localStorage.setItem('currentUser', JSON.stringify(user));
-	document.getElementById('loginButton').innerText = 'Личный кабинет';
-	document.getElementById('loginButton').href = 'user_page.html';
-}*/
-
-document.getElementById('regButton').addEventListener('click', registrationUser);
-
 

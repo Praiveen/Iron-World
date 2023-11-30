@@ -4,10 +4,14 @@ const notifTotalObjects = document.querySelector(".notification-base");
 const notifTotalObjectsOut = document.querySelector(".notif-total");
 function incrementCounter() {
     counterr++;
-    let notificationElement = document.createElement('div');
-    notificationElement.className = 'notif-block';
-    notificationElement.textContent = `Уведомление ${counterr}`;
-    document.getElementById('notificationContainer').appendChild(notificationElement);
+    document.getElementById('notificationContainer').insertAdjacentHTML("beforeend",`
+       <div class="notif-block">Уведомление ${counterr}
+
+            <img class="close-btn" src="pict/krest.svg">
+       </div>
+    `);
+
+
     if(counterr == 1){
        notifTotalObjects.insertAdjacentHTML("beforeend",`
        <p class="notif-total">${counterr}</p>
@@ -23,4 +27,4 @@ function incrementCounter() {
  }
 
 
-intervalId = setInterval(incrementCounter, 100000);
+intervalId = setInterval(incrementCounter, 3000);

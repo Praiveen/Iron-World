@@ -1181,7 +1181,7 @@ footer{
 		text-align: center;
 		width: 400px;
 		height: 200px;
-		background: white;
+		background: grey;
 		color: black;
 }
 
@@ -1429,6 +1429,7 @@ footer{
 
 
 .notif-block{
+
    padding: 20px;
    background-color: #9bcdff;
    color: black;
@@ -1437,6 +1438,16 @@ footer{
    width: 70%;
    margin: auto auto;
    margin-bottom: 15px;
+   position: relative;
+   text-align: center;
+}
+
+.notif-block img{
+
+	position: absolute;
+	width: 15px;
+	cursor: pointer;
+	left: 210px;
 }
 
 .task3{
