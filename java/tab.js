@@ -11,7 +11,7 @@ function truncateAll(){
     const texts = document.querySelectorAll(".textContainer");
     texts.forEach(element => {
         let str = element.textContent;
-        element.textContent = truncate(str, 200);
+        element.textContent = truncate(str, 300);
     });
 }
 

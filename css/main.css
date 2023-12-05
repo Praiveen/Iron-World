@@ -987,13 +987,40 @@ nav{
 .news_page{
 	color: #c9c9c9;
 	padding: 20px;
+	text-align: justify;
 }
 
 .news_page_title{
-
+	border: #245D99 2px solid;
+	border-radius: 4px;
+	background: #1C1C21;
+	padding-left: 10px;
 }
 
+.news_page_title div{
+	margin: 15px 0 15px 0;
+}
+
+.news_page_title a{
+	color: #c9c9c9;
+	transition: all 0.2s;
+}
+
+.news_page_title a:hover{
+	color: orange;
+}
+
+
 .news_page_main{
+	text-align: justify;
+}
+
+.news_page_main div{
+	text-align: center;
+}
+
+.news_page_main img{
+	width: 80%;
 
 }
 
