@@ -1,7 +1,5 @@
 
-// Проверяем, есть ли в LocalStorage информация о входе
 if (localStorage.getItem('loggedIn') === 'true') {
-	// Если пользователь вошел в систему, меняем текст кнопки и ссылку
 	document.getElementById('loginButton').innerText = 'Личный кабинет';
 	document.getElementById('loginButton').href = 'user_page.html';
 	document.getElementById('loginButton').removeAttribute("onclick");
@@ -32,39 +30,17 @@ let users = [
 	},
 ];
 
-// if (flagEnter === 0) {
-// 	localStorage.setItem('users', JSON.stringify(users));
-// 	flagEnter = 1;
-// }
-
 
 // Функция для обработки входа в систему
 function handleLogin() {
-
+	let users = JSON.parse(localStorage.getItem('users'));
 	var email = document.getElementById('emailInput').value;
 	var password = document.getElementById('passwordInput').value;
-
+	var currentUser;
 	var user = users.find(function(user) {
-	   var currentUser = user;
+	   currentUser = user;
 	   return user.email === email && user.password === password;
 	 });
-	var dop = users.find(function(user) {
-		if (user.email === email) {
-			var currentUser = user;
-		}
-	   	
-	 });
-	// for (var i = 0; i <= users.length; i++) {
-	// 	if (user[i].email === email) {
-	// 		alert(1);
-	// 		var currentUser = user[i];
-	// 	}
-	// }
-	var currentUser = users[0];
-	/*var currentUser = users.find(function(user) {
-	   return user;
-	 });*/
-
 	if (user) {
 	   localStorage.setItem('loggedIn', 'true');
 	   localStorage.setItem('currentUser', JSON.stringify(currentUser));

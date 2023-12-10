@@ -5,7 +5,8 @@ const notifTotalObjectsOut = document.querySelector(".notif-total");
 function incrementCounter() {
     counterr++;
     document.getElementById('notificationContainer').insertAdjacentHTML("beforeend",`
-       <div class="notif-block">Уведомление ${counterr}
+       <div class="notif-block">
+       <a href="cooler_store.html">Уведомление ${counterr}</a>
 
             <img class="close-btn" src="pict/krest.svg">
        </div>

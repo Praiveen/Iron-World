@@ -1,12 +1,7 @@
 
-//var cart = [];
-
-//const storagee = window.localStorage;
-
-//let cart = window.localStorage.getItem('store');
 let cartTotal = 0;
 const cartDom = document.querySelector(".cart");
-const cartTotalObjects = document.querySelector(".relat-img-cart");
+const cartTotalObjects = document.querySelector(".cart-img-block");
 
 var addtocartbtnDom = document.querySelectorAll('[data-action="add-to-cart"]');
 
@@ -14,81 +9,9 @@ let usersString = localStorage.getItem('store');
 //let cart = JSON.parse(usersString) || [];
 
 cart = []; 
-//localStorage.setItem('store', JSON.stringify(cart));
-
-/*console.log(typeof cart);
-if (cart.length != 0) {
-  cart.forEach(cartItem => {
-    alert(cart.length);
-  cartDom.insertAdjacentHTML("beforeend",`
-  <div class="cart-items">
-   <div class="store-flex-box">
-     <div class="">
-         <img src="${cartItem.img}" alt="${cartItem.name}" style="width: 100px;"/>
-     </div>
-     <div class="">
-         <p class="cart_item_name">${cartItem.name}</p>
-     </div>
-     <div class="">
-         <p class="cart_item_price">${cartItem.price}</p>
-     </div>
-   </div>
-   <div class="store-flex-box">
-     <div>
-       <button class="store-btn" type="button" data-action="decrease-item">-
-     </div>
-     <div>
-       <p class="cart_item_quantity">${cartItem.quantity}</p>
-     </div>
-     <div>
-         <button class="store-btn" type="button" data-action="increase-item">+
-     </div>
-   </div>
-   <div class="store-flex-box">
-       <button class="store-btn btn-red" type="button" data-action="remove-item">Удалить товар
-   </div>
- </div>`);
-});
-
-if(cart.length != 0){
-   cartTotalObjects.insertAdjacentHTML("beforeend",`
-   <p class="relat-img-cart-total-objects">${cart.length + 1}</p>
-   `);
-}
-if(document.querySelector('.cart-footer') === null){
-  cartDom.insertAdjacentHTML("afterend",  `
-    <div class="cart-footer">
-      <p>Итог</p>
-      <div class="store-flex-box">
-        <div>
-          <button class="store-btn" type="button" data-action="clear-cart">Очистить корзину
-        </div>
-        <div>
-          <button class="store-btn" type="button" data-action="check-out">Купить <span class="pay"></span>
-        </div>
-      </div>
-    </div>`); }
-}*/
-
-
-/*else{
- //alert( cart.length + 1);
- document.querySelector('.relat-img-cart-total-objects').innerText = cart.length + 1;
-}*/
-
-/*for (var i = 0; i < cart.length; i++) {
-  const product = {
-      img: cart[i].img,
-      name: cart[i].name,
-      price: cart[i].price,
-      quantity: cart[i].quantity
-    };
-}*/
-
 
 
 addtocartbtnDom.forEach(addtocartbtnDom => {
-
   addtocartbtnDom.addEventListener("click", () => {
     const productDom = addtocartbtnDom.parentNode.parentNode;
     const product = {
@@ -107,30 +30,31 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
       cartDom.insertAdjacentHTML("beforeend",`
       <div class="cart-items">
         <div class="store-flex-box">
-          <div class="">
+          <div class="store-flex-box-1">
               <img src="${product.img}" alt="${product.name}" style="width: 100px;"/>
           </div>
-          <div class="">
-              <p class="cart_item_name">${product.name}</p>
+          <div class="store-flex-box-2">
+              <div class="store-flex-box-inside1">
+                  <p class="cart_item_name">${product.name}</p>
+                  <p class="cart_item_price">${product.price}</p>
+              </div>
+              <div class="store-flex-box-inside2 store-flex-box">
+                  <div class="store-flex-box-inside3 store-flex-box">
+                      <div>
+                          <button class="store-btn" type="button" data-action="decrease-item">-
+                      </div>
+                      <div>
+                          <p class="cart_item_quantity">${product.quantity}</p>
+                      </div>
+                      <div>
+                          <button class="store-btn" type="button" data-action="increase-item">+
+                      </div>
+                  </div>
+                  <div class="store-flex-box-inside4 store-flex-box">
+                      <button class="store-btn btn-red" type="button" data-action="remove-item">Удалить товар
+                  </div>
+              </div>
           </div>
-          <div class="">
-              <p class="cart_item_price">${product.price}</p>
-          </div>
-        </div>
-        <div class="store-flex-box">
-          <div>
-            <button class="store-btn" type="button" data-action="decrease-item">-
-          </div>
-          <div>
-            <p class="cart_item_quantity">${product.quantity}</p>
-          </div>
-          <div>
-              <button class="store-btn" type="button" data-action="increase-item">+
-          </div>
-          
-        </div>
-        <div class="store-flex-box">
-            <button class="store-btn btn-red" type="button" data-action="remove-item">Удалить товар
         </div>
       </div> `);
       if(cart.length == 0){

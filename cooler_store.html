@@ -47,10 +47,8 @@
                 </label>
                 <div class="nav-menu">
                     <a href="index.html">Главная</a>
-                    <a href="#">Блог</a>
-                    <a href="#">Лучшие сборки</a>
-                    <a href="#">О сайте</a>
-                    <a href="contacts.html">Контакты</a>
+                    <a href="pc_recomendation.html">Лучшие сборки</a>
+                    <a href="about.html">О сайте</a>
                     <a id="loginButton" onclick="enterForm() " href="#">Войти</a> 
                 </div>                
             </div>
@@ -379,11 +377,9 @@
                     <h1>Страницы</h1>
                     <ul>
                       <li><a href="index.html">Главная</a></li>
-                      <li><a href="#">Блог</a></li>
-                      <li><a href="#">Конфигуратор</a></li>
-                      <li><a href="#">О сайте</a></li>
-                      <li onclick="callForm()"><a href="#">Обратная связь</a></li>
-                      <li><a onclick="enterForm()" href="#">Войти</a> </li>
+                      <li><a href="pc_recomendation.html">Лучшие сборки</a></li>
+                      <li><a href="about.html">О сайте</a></li>
+                      <li><a id="loginButton" onclick="enterForm() " href="#">Войти</a> </li>
                     </ul>
                     
                 </div>
@@ -393,12 +389,14 @@
                <div class="other-pages">
                     <h1>Комплектующие</h1>
                     <ul>
-                      <li><a href="#">Материнские платы</a></li>
-                      <li><a href="#">Видеокарты</a></li>
-                      <li><a href="#">Процессоры</a></li>
-                      <li><a href="#">ОЗУ</a></li>
-                      <li><a href="#">ПЗУ</a></li>
-                      <li><a href="#">Прочее</a></li>
+                        <li class="menu-item"><a href="motherboard_store.html">Материнские платы</a></li>
+                        <li class="menu-item"><a href="gpu_store.html">Видеокарты</a></li>
+                        <li class="menu-item"><a href="cpu_store.html">Процессоры</a></li>
+                        <li class="menu-item"><a href="ram_store.html">Оперативная память</a></li>
+                        <li class="menu-item"><a href="rom_store.html">Хранение данных</a></li>
+                        <li class="menu-item"><a href="cooler_store.html">Охлаждение</a></li>
+                        <li class="menu-item"><a href="case_store.html">Корпуса</a></li>
+                        <li class="menu-item"><a href="power_store.html">Блоки питания</a></li>
                     </ul>
                     
                 </div>
@@ -421,9 +419,10 @@
 
     </footer>
  </body>
+<script src="java/store.js"></script>
 <script src="java/main.js"></script>
 <script src="java/tab.js"></script>
-<script src="java/12p.js"></script>
 <script src="java/user_enter.js"></script>
+<script src="java/12p.js"></script>
 
 </html>

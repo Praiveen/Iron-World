@@ -35,7 +35,7 @@
         </div>
     </div>
     <header>
-        <nav>
+<nav>
             <div class="nav">
                 <div class="nav-tel">
                     <img src="pict/video_card.svg" alt="Логотип" />
@@ -48,10 +48,8 @@
                 </label>
                 <div class="nav-menu">
                     <a href="index.html">Главная</a>
-                    <a href="#">Блог</a>
-                    <a href="#">Конфигуратор</a>
-                    <a href="#">О сайте</a>
-                    <a href="contacts.html">Контакты</a>
+                    <a href="pc_recomendation.html">Лучшие сборки</a>
+                    <a href="about.html">О сайте</a>
                     <a id="loginButton" onclick="enterForm() " href="#">Войти</a> 
                 </div>                
             </div>
@@ -97,7 +95,7 @@
 
                         <div id="storage" class="storage" style="display: none;">
                             <p>Корзина</p>
-                            <div class="cart"></div>  
+                            <div class="cart" ondragover="allowDrop(event)" ondrop="drop(event)"></div>  
                         </div>
                     </div>
                 </div>
@@ -105,9 +103,14 @@
             <section class="gallery-flex">
                 <div class="img-container">
                     <img class="product-img" src="pict/gpu/4090.png" alt="">
-                    <div class="caption">
-                        <h1 class="product-name"> GIGABYTE GeForce RTX 4090</h1>
-                        <p>тееееееекс</p>
+                    <div class="caption" >
+                        <h1 class="product-name">GIGABYTE GeForce RTX 4090 WINDFORCE</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 4090 <br>
+                        Частота графического процессора (базовая): 2520 МГц <br>
+                        Тип видеопамяти: GDDR6X <br>
+                        Объем видеопамяти: 24 Гб <br>
+                        Шина памяти: 384 бит</p>
                         <p class="product-price">150000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
@@ -116,7 +119,12 @@
                     <img class="product-img" src="pict/gpu/4080.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">MSI GeForce RTX 4080 GAMING X TRIO 16G</h1>
-                        <p>тееееееекс</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 4080 <br>
+                        Частота графического процессора (базовая): 2210 МГц <br>
+                        Тип видеопамяти: GDDR6X <br>
+                        Объем видеопамяти: 16 Гб <br>
+                        Шина памяти: 256 бит</p>
                         <p class="product-price">120000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
@@ -125,7 +133,12 @@
                     <img class="product-img" src="pict/gpu/4070.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">PALIT GeForce RTX 4070 DUAL 12G</h1>
-                        <p>тееееееекс</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 4070 <br>
+                        Частота графического процессора (базовая): 1920 МГц <br>
+                        Тип видеопамяти: GDDR6X <br>
+                        Объем видеопамяти: 12 Гб <br>
+                        Шина памяти: 192 бит </p>
                         <p class="product-price">70000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
@@ -134,7 +147,12 @@
                     <img class="product-img" src="pict/gpu/4060.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">ASUS GeForce RTX 4060 Ti GAMING OC 8G</h1>
-                        <p>тееееееекс</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 4060 Ti <br>
+                        Частота графического процессора (базовая): 2310 МГц <br>
+                        Тип видеопамяти: GDDR6 <br>
+                        Объем видеопамяти: 8 Гб <br>
+                        Шина памяти: 128 бит </p>
                         <p class="product-price">60000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
@@ -142,18 +160,29 @@
                 <div class="img-container">
                     <img class="product-img" src="pict/gpu/3080.png" alt="">
                     <div class="caption">
-                        <h1 class="product-name">PALIT GeForce RTX 3080 Ti GAMEROCK 12G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">140000 ₽</p>
+                        <h1 class="product-name">MSI GeForce RTX 3080 Ti GAMING X 12G</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор:NVIDIA GeForce RTX 3080 Ti <br>
+                        Частота графического процессора (базовая): 1665 МГц <br>
+                        Тип видеопамяти: GDDR6X <br>
+                        Объем видеопамяти: 12 Гб <br>
+                        Шина памяти: 384 бит </p>
+                        <p class="product-price">100000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
                 <div class="img-container">
                     <img class="product-img" src="pict/gpu/3070.png" alt="">
-                    <div class="caption">
-                        <h1 class="product-name">MSI GeForce RTX 3070 VENTUS 3X PLUS OC 8G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">70000 ₽</p>
+                    <div class="caption" >
+                        <h1 class="product-name">MSI GeForce RTX 3070 VENTUS 3X PLUS 8G</h1>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор:NVIDIA GeForce RTX 3070 <br>
+                        Частота графического процессора (базовая): 1755 МГц <br>
+                        Тип видеопамяти: GDDR6 <br>
+                        Объем видеопамяти: 8 Гб <br>
+                        Шина памяти: 256 бит <br>
+                        Частота видеопамяти:14000 МГц</p>
+                        <p class="product-price">60000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
@@ -161,8 +190,13 @@
                     <img class="product-img" src="pict/gpu/3060.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">Palit GeForce RTX 3060 Ti Dual OC 8G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">45000 ₽</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 3060 Ti <br>
+                        Частота графического процессора (базовая): 1410 МГц <br>
+                        Тип видеопамяти:GDDR6 <br>
+                        Объем видеопамяти: 8 Гб <br>
+                        Шина памяти: 256 бит</p>
+                        <p class="product-price">30000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
@@ -170,8 +204,13 @@
                     <img class="product-img" src="pict/gpu/2060.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">SINOTEX GeForce RTX 2060 NINJА 6G</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">27000 ₽</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: NVIDIA GeForce RTX 2060 <br>
+                        Частота графического процессора (базовая): 1365 МГц <br>
+                        Тип видеопамяти: GDDR6 <br>
+                        Объем видеопамяти: 6 Гб <br>
+                        Шина памяти: 192 бит </p>
+                        <p class="product-price">24000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
@@ -179,52 +218,38 @@
                     <img class="product-img" src="pict/gpu/rx580.png" alt="">
                     <div class="caption">
                         <h1 class="product-name">MLLSE AMD RX 580 8 ГБ 2048SP</h1>
-                        <p>тееееееекс</p>
-                        <p class="product-price">6000 ₽</p>
+                        <p class="product-ttx">Характеристики <br>
+                        Графический процессор: AMD Radeon RX 580 2048SP <br>
+                        Частота графического процессора (базовая): 1284 МГц <br>
+                        Тип видеопамяти: GDDR5 <br>
+                        Объем видеопамяти: 8 Гб <br>
+                        Шина памяти: 256 бит </p>                        <p class="product-price">6000 ₽</p>
                         <button type="button" data-action="add-to-cart">Купить</button>
                     </div>
                 </div>
             </section>
         </article>
-        <div id="call-modal" style="display: none;">
-            <div onclick="callForm()" class="modal-blur"></div>
-            <div class="modal-container-bonus">
+        <div id="register-modal" style="display: none;">
+            <div onclick="registrationForm()" class="modal-blur"></div>
+            <div class="modal-container">
                 <div class="modal-block">
-                    <div onclick="callForm()" class="modal-close"> <use href="#close"><img src="pict/krest.svg"></use></div>
-                    <h1>Обратная связь</h1>
-
-                    <form method="get" class="modal-form">    
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <input required type="text" name="Имя" pattern="[A-Za-zА-Яа-яЁё]{,2}" />
-                            <label for="Имя">Имя</label>
-                          </div>
-                          <div class="grid-input">
-                            <input required type="text" name="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{,2}" />
-                            <label for="Фамилия">Фамилия</label>
-                          </div>  
+                    <div onclick="registrationForm()" class="modal-close"> 
+                        <img src="pict/krest.svg"> 
+                    </div>
+                    <form id="login" class="modal-form">
+                        <h1>Регистрация</h1>
+                        <div>
+                            <input id="emailInputRegistr" type="email" name="Почту" placeholder="Введите почту" />
                         </div>
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <input required type="tel" name="Телефон" />
-                            <label for="Телефон">Телефон</label>
-                          </div>
-                          <div class="grid-input">
-                            <input required type="email" id="email" name="почта" />
-                            <label for="почта">Почта</label>
-                          </div> 
+                        <div>
+                            <input id="passwordInputRegistr1" type="password" name="пароль" placeholder="Введите пароль">
                         </div>
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <textarea id="Сообщение" required></textarea>
-                            <label for="Сообщение">Напишите ваше сообщение</label>
-                          </div>
+                        <div>
+                            <input id="passwordInputRegistr2" type="password" name="пароль" placeholder="Подтвердите пароль">
                         </div>
-
-                        <button type="submit">Отправить</button>
+                        <div style="display: flow">
+                            <button id="regButton">Зарегестрироваться</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -256,45 +281,6 @@
                 </div>
             </div>
         </div>
-
-
-        <div id="feedback-modal" style="display: none;">
-            <div onclick="feedbackForm()" class="modal-blur"></div>
-            <div class="modal-container">
-                <div class="modal-block">
-                    <div onclick="feedbackForm()" class="modal-close"> <img src="pict/krest.svg"> </div>
-                    <form method="get" class="modal-form">
-                        <h1>Оставьте ваш отзыв</h1>
-                        <div>
-                            <textarea cols="30" rows="4" maxlength="300" minlength="10" required placeholder="Ваш отзыв"></textarea>
-                        </div>
-                        <div class="modal-radio">
-                            <fieldset>
-                                <legend>Оцените качество сайта от 1 до 5</legend>
-                            <input type="radio" name="Выбор" id="1-point">
-                            <label for="1-point">1</label>
-                            <input type="radio" name="Выбор" id="2-point">
-                            <label for="2-point">2</label>
-                            <input type="radio" name="Выбор" id="3-point">
-                            <label for="3-point">3</label>
-                            <input type="radio" name="Выбор" id="4-point">
-                            <label for="4-point">4</label>
-                            <input type="radio" checked name="Выбор" id="5-point">
-                            <label for="5-point">5</label> 
-                            </fieldset>
-                            
-                        </div>
-                        <div>
-                            <p>Приложите фото вашего пк, заказанного у нас</p>
-                            <div class="input-file">
-                                <input type="file" name="Файл" placeholder="Добавьте файл">
-                            </div>
-                        </div>
-                        <button type="submit">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer>
@@ -319,11 +305,9 @@
                     <h1>Страницы</h1>
                     <ul>
                       <li><a href="index.html">Главная</a></li>
-                      <li><a href="#">Блог</a></li>
-                      <li><a href="#">Конфигуратор</a></li>
-                      <li><a href="#">О сайте</a></li>
-                      <li onclick="callForm()"><a href="#">Обратная связь</a></li>
-                      <li><a onclick="enterForm()" href="#">Войти</a> </li>
+                      <li><a href="pc_recomendation.html">Лучшие сборки</a></li>
+                      <li><a href="about.html">О сайте</a></li>
+                      <li><a id="loginButton" onclick="enterForm() " href="#">Войти</a> </li>
                     </ul>
                     
                 </div>
@@ -333,12 +317,14 @@
                <div class="other-pages">
                     <h1>Комплектующие</h1>
                     <ul>
-                      <li><a href="#">Материнские платы</a></li>
-                      <li><a href="#">Видеокарты</a></li>
-                      <li><a href="#">Процессоры</a></li>
-                      <li><a href="#">ОЗУ</a></li>
-                      <li><a href="#">ПЗУ</a></li>
-                      <li><a href="#">Прочее</a></li>
+                        <li class="menu-item"><a href="motherboard_store.html">Материнские платы</a></li>
+                        <li class="menu-item"><a href="gpu_store.html">Видеокарты</a></li>
+                        <li class="menu-item"><a href="cpu_store.html">Процессоры</a></li>
+                        <li class="menu-item"><a href="ram_store.html">Оперативная память</a></li>
+                        <li class="menu-item"><a href="rom_store.html">Хранение данных</a></li>
+                        <li class="menu-item"><a href="cooler_store.html">Охлаждение</a></li>
+                        <li class="menu-item"><a href="case_store.html">Корпуса</a></li>
+                        <li class="menu-item"><a href="power_store.html">Блоки питания</a></li>
                     </ul>
                     
                 </div>
@@ -365,5 +351,6 @@
 <script src="java/main.js"></script>
 <script src="java/tab.js"></script>
 <script src="java/user_enter.js"></script>
+<script src="java/12p.js"></script>
 
 </html>

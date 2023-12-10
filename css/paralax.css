@@ -1,5 +1,6 @@
 body, html {
-  height: 250%;
+  height: clamp(190%, 330vw, 250%);
+  width: 100%;
   margin: 0;
 }
 
@@ -28,12 +29,12 @@ body, html {
 
 .content h1{
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2rem, 3.6vw, 3rem);
 }
 
 .content p{
   color: white;
-  font-size: 2rem;
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
 }
 
 .content a{
@@ -43,15 +44,14 @@ body, html {
   border: white;
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(33,212,96,1) 0%, rgba(0,212,255,1) 100%);
   color: black;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
   list-style-type: none;
   text-decoration: none;
   margin: 10px;
 }
 
 .content1 {
-  width: 500px;
-  height: 300px;
+  width: clamp(17rem, 40vw, 35rem);
   position: absolute;
   top: 7%;
   left: 50%;
@@ -60,31 +60,31 @@ body, html {
 }
 
 .content2 {
-  width: 900px;
-  height: 750px;
+  width: clamp(17rem, 80vw, 45rem);
+
   position: absolute;
-  top: 25%;
-  left: 65%;
+  top: 27%;
+  left: 50%;
   text-align: center;
 }
 
 
 
 .content3 {
-  width: 700px;
-  height: 400px;
+  width: clamp(17rem, 80vw, 45rem);
+
   position: absolute;
-  top: 43%;
-  left: 30%;
+  top: 44%;
+  left: 50%;
   text-align: center;
 }
 
 .content4 {
-  width: 800px;
-  height: 740px;
+  width: clamp(17rem, 80vw, 45rem);
+
   position: absolute;
-  top: 64%;
-  left: 60%;
+  top: 61%;
+  left: 50%;
   text-align: center;
 }
 
@@ -94,19 +94,18 @@ body, html {
 
 
 .content5 {
-  width: 500px;
-  height: 300px;
+  width: clamp(17rem, 80vw, 45rem);
   position: absolute;
-  top: 83%;
-  left: 30%;
+  top: 78%;
+  left: 50%;
   text-align: center;
 }
 
 .content6 {
-  width: 500px;
-  height: 300px;
+  width: clamp(17rem, 40vw, 35rem);
+
   position: absolute;
-  top: 95%;
+  top: 90%;
   left: 50%;
   text-align: center;
 }

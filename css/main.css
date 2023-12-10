@@ -1,6 +1,6 @@
-p, legend, option{
+p, legend, option, a, li{
 	font-family: 'PT Sans Caption', sans-serif;
-	font-size: calc(0.1em + 1vw);
+	font-size: clamp(9px, 1.6vw, 15px);
 }
 
 a{
@@ -20,17 +20,17 @@ a{
   }
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
   p, legend, option{
-     font-size: 9px;
+     font-size: clamp(9px, 1.6vw, 15px);
   }
-}
+}*/
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
   a{
      font-size: 10px;
   }
-}
+}*/
 
 
 :root {
@@ -144,6 +144,7 @@ nav{
 }
 
 
+
 #menu-toggle {
   display: none;
 }
@@ -216,6 +217,7 @@ nav{
 	}
 	.nav-menu
 	{
+
 		display: flex;
 		flex-direction: column;
 	  position: absolute;
@@ -277,19 +279,19 @@ nav{
 .menu-item-main a{
 	background: #0E223D;
 	display: block;
-  padding: 10px;
+  padding: clamp(5px, 1vw, 10px);
   color: #BBC9DA;
-  font-size: 18px;
+  font-size: clamp(13px, 1.2vw, 18px);
   transition: color 0.2s, background 0.5s;
   margin: 1px;
 }
 
 .menu-item-main .menu-item a{
   display: block;
-  padding: 10px;
+  padding: clamp(5px, 1vw, 10px);
   background: #13315A;
   color: #BBC9DA;
-  font-size: 18px;
+  font-size: clamp(13px, 1.2vw, 18px);
   transition: color 0.2s, background 0.5s;
   margin: 1px;
 }
@@ -300,10 +302,6 @@ nav{
   background: #0e223d;
 }
 
- @media screen and (max-width: 1300px) {
-    .menu-item a { font-size: 12px; }
-    .panel h3 {font-size: 12px}
-   }
 
 
 /* Стили для маленьких экранов */
@@ -348,6 +346,17 @@ nav{
 
 	.panel-min-800{
 		display: block;
+	}
+
+	.menu-item-main a{
+
+  padding: 10px;
+  font-size: 18px;
+	}
+
+	.menu-item-main .menu-item a{
+	  padding: 10px;
+	  font-size: 18px;
 	}
 }
 
@@ -437,6 +446,11 @@ nav{
 	flex-grow: 0;
 	padding: 20px;
 	cursor: pointer;
+	color: black;
+}
+
+.window-4 a{
+	color: black;
 }
 
 .window-1{
@@ -595,7 +609,8 @@ nav{
 	border-radius: 10px;
 	background: #ff5e5e;
 	text-align: center;
-   transition: opacity 2s;
+  transition: opacity 2s;
+  font-size: 15px;
 }
 
 
@@ -639,6 +654,18 @@ nav{
 		width: 25px;
 		height: 25px;
 	}
+	.notif-total{
+		position: absolute;
+		top: -18px;
+		right: -3px;
+		width: 15px;
+		height: 15px;
+		border-radius: 10px;
+		background: #ff5e5e;
+		text-align: center;
+	  transition: opacity 2s;
+	  font-size: 12px;
+	}
 
 }
 /*ОСНОВНОЙ КОНТЕНТ*/
@@ -646,29 +673,22 @@ nav{
 .news{
 	margin: 0 auto;
 	margin: 5px;
-	height: 120px;
+	min-height: 100px;
 	background-color: #1C1C21;
 	border-radius: 5px;
 	transition: 0.5s;
+	padding: 10px 18px 15px 10px;
 }
 
 .news:hover{
-	background-color: #27272b;
+	background-color: #18181c;
 }
-
 .main-news{
-	padding: calc(0.1em + 0.7vw) 0 0 calc(0.6em + 1vw);
-}
-
-@media (min-width: 1000px){
-	.main-news{
-		padding: 10px 0 0 17px;
-	}
+	padding: 5px 0 0 10px;
 }
 
 .news a{
 	color: #7575ea;
-/*	font-size: calc(0.3em + 1vw);*/
 }
 
 .news img{
@@ -683,33 +703,20 @@ nav{
 .news p{
 	margin: 0;
 	padding-top: 10px;
-	width: 100%;
-	height: 80px;
+
 	color: #f4f4f7;
+	padding-left: 100px;
+	text-align: justify;
 }
 
-.contacts-container{
-	margin: 0 auto;
-	margin: 5px;
-	height: 500px;
-	background-color: #1C1C21;
-	border-radius: 5px;
-	transition: 0.5s;
-	box-shadow: 0 5px 10px grey;
-	text-align: center;
+@media (max-width: 800px){
+	.news{
+		padding: 3px 15px 7px 7px;
+	}
+	.main-news{
+		padding: 3px 0 0 10px;
+	}
 }
-
-.contacts-container div{
-	display: flex;
-	justify-content: center;
-	margin: 20px;
-}
-
-.contacts-container h3{
-	font-weight: bold;
-	color: white;
-}
-
 
 .media-contact{
 	overflow: hidden;
@@ -749,32 +756,72 @@ nav{
 
 .video-panel {
 	margin: 0;
-	position: 0;
+	padding: 3px;
   text-align: center;
 
   background: linear-gradient(#4e5054, grey);
   grid-column: 14 / span 3;
 }
 
+.video-panel iframe{
+	width: 100%;
+}
+
 @media (max-width: 800px){
 	.video-panel{
 		grid-column: 1 / span 16;
+	}
+	.video-panel iframe{
+		width: 50%;
 	}
 }
 
 
 
-/*МОДАЛ ОКНО ОТЗЫВЫ*/
-
-#call-modal{
-	position: fixed;
-	display: none;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 16;
+.recomendation{
+	margin: 0 auto;
+	margin: 5px;
+	min-height: 100px;
+	background-color: #1C1C21;
+	border-radius: 5px;
+	transition: 0.5s;
+	padding: 15px 15px 15px 15px;
 }
+
+.recomendation h1{
+	color: #7575ea;
+	text-indent: 30px;
+}
+
+.recomendation p{
+	text-align: justify;
+	text-indent: 30px;
+	color: #c9c9c9;
+}
+
+.recomendation li a{
+	color: #c9c9c9;
+	transition: all 0.2s;
+}
+
+.recomendation li a:hover{
+	color: orange;
+}
+
+
+.recomendation ul{
+	list-style-type: none;
+	margin: 0;
+
+	color: #c9c9c9;
+}
+
+
+
+
+
+
+/*МОДАЛ ОКНО ОТЗЫВЫ*/
 
 #enter-modal{
 	position: fixed;
@@ -784,16 +831,6 @@ nav{
 	top: 0;
 	left: 0;
 	z-index: 20;
-}
-
-#feedback-modal{
-	position: fixed;
-	display: none;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 10;
 }
 
 #register-modal{
@@ -820,6 +857,7 @@ nav{
 	right: 10px;
 	width: 5%;
 	height: 5%;
+	cursor: pointer;
 }
 
 .modal-container{
@@ -827,7 +865,6 @@ nav{
 	top: 50%;
 	transform: translate(0, -50%);
 	margin: auto auto auto auto;
-/*	max-width: 60vw;*/
  width: clamp(17rem, 40vw, 35rem);
 /*	width: clamp(10rem, 15rem, 40rem);*/
 
@@ -929,6 +966,7 @@ nav{
   padding: 0;
 
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .modal-form button:hover {
@@ -947,10 +985,28 @@ nav{
 .register-form p{
 	font-size: calc(0.2em + 1vw);
 	margin-bottom: 0px;
+	margin: 0 0 5px 0;
 }
 
+
+.register-form button {
+	text-align: center;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
+
+	background-color: #13315A;
+	color: #FFF;
+	border-radius: clamp(0.6rem, 2vw, 0.8rem);
+	border: none;
+
+	width: clamp(10rem, 20vw, 15rem);
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  cursor: pointer;
+}
+
+
 .register-form button{
-	margin-top: 5px;
 	background-color: #f95959;
 }
 
@@ -1011,8 +1067,13 @@ nav{
 }
 
 
-.news_page_main{
+.news_page_main p, .news_page_main h1{
 	text-align: justify;
+	text-indent: 30px;
+}
+
+.news_page_main h1{
+	margin: 20px 0 20px 0;
 }
 
 .news_page_main div{
@@ -1028,6 +1089,54 @@ nav{
 	margin: 10px;
 	display: flex;
 }
+
+
+@media (max-width: 800px){
+	.news_page{
+		padding: 10px;
+	}
+
+	.news_page_title{
+		border-radius: 4px;
+		background: #1C1C21;
+		padding-left: 6px;
+	}
+
+	.news_page_title div{
+		margin: 6px 0 6px 0;
+	}
+
+
+	.news_page_main p, .news_page_main h1{
+		text-align: justify;
+		text-indent: 15px;
+	}
+
+	.news_page_main p{
+		font-size: 11px;
+	}
+
+	.news_page_main h1{
+		font-size: 13px;
+		margin: 10px 0 10px 0;
+	}
+
+	.news_page_main div{
+		text-align: center;
+	}
+
+	.news_page_main img{
+		width: 100%;
+
+	}
+
+	.news_page_discr{
+		margin: 10px;
+		display: flex;
+	}
+	
+}
+
 
 .news_like_button{
 	user-select: none; 
@@ -1058,7 +1167,6 @@ nav{
 	width: 20px;*/
 	font-size: 15px;
 }
-
 
 
 
@@ -1233,7 +1341,6 @@ footer{
 .cart-shop{
 	background: white;
 	margin-bottom: 5px;
-
 }
 
 .cart-shop img{
@@ -1243,8 +1350,8 @@ footer{
 
 .relat-img-cart-total-objects{
 	position: absolute;
-	top: -18px;
-	right: 9px;
+	top: -5px;
+	right: 10px;
 	width: 20px;
 	height: 20px;
 	border-radius: 10px;
@@ -1259,7 +1366,7 @@ footer{
 }
 
 .cart-img-block{
-	width: 80px;
+	width: 90px;
 	height: 100%;
 	text-align: center;
 	margin-left: auto; 
@@ -1281,11 +1388,9 @@ footer{
 	top: 49px;
 	right: 0;
 	z-index: 10;
+	border: 2px solid orange;
 
 }
-
-
-
 
 .storage p{
 	text-align: center;
@@ -1297,12 +1402,40 @@ footer{
 	padding: 10px;
 	justify-content: center;
 }
+
+
 .store-flex-box p{
 	font-size: 15px;
 	margin: 0;
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+.store-flex-box-1{
+	width: 30%;
+	overflow: hidden;
+}
+
+.store-flex-box-2{
+	width: 70%;
+	min-height: 50px;
+}
+
+.store-flex-box-inside1{
+	display: flex;
+}
+
+.cart_item_name{
+	width: 70%;
+}
+
+.store-flex-box-inside3{
+	width: 80%;
+}
+.store-flex-box-inside4{
+	width: 20%;
+}
+
 
 .store-btn {
 	margin-left: 20px;
@@ -1323,6 +1456,7 @@ footer{
 }
 
 .btn-red{
+	margin: 0;
 	background-color: red;
 }
 
@@ -1331,21 +1465,10 @@ footer{
 	overflow-y: auto;
 }
 
-/*.Capch-base{
-	margin: 20px;
-		display: flex;
-		justify-content: center;
+.cart-items{
+	margin: 5px;
+	border: 2px solid blue;
 }
-
-.capch-block{
-	padding: 30px;
-		text-align: center;
-		width: 400px;
-		height: 200px;
-		background: white;
-		color: black;
-}
-*/
 
 @media (max-width: 800px){
 	.cart-img-block{
@@ -1359,6 +1482,16 @@ footer{
 	}
 	.storage{
 		width: 350px;
+	}
+	.relat-img-cart-total-objects{
+		top: -5px;
+		right: 0px;
+		font-size: 13px;
+	}
+	.cart-img-block p{
+		margin: 0;
+		padding: 0;
+		font-size: 13px;
 	}
 	
 }
@@ -1477,15 +1610,6 @@ footer{
 	left: 210px;
 }
 
-.task3{
-
-	margin: 0 auto;
-	margin: 5px;
-	height: 220px;
-	background-color: #1C1C21;
-	border-radius: 5px;
-	transition: 0.5s;
-}
 
 .task3Start{
 	margin: 30px;
@@ -1502,11 +1626,6 @@ footer{
 	top: 50%;
 	right: 50%;
 }
-
-
-
-
-
 
 
 /*окно входа*/
@@ -1613,9 +1732,6 @@ footer{
   transform: translateX(-100%);
 }
 
-/*.checkbox-group label:active:after {
-  width: 130px;
-}*/
 
 .form-group ::placeholder{
 	color: grey;
