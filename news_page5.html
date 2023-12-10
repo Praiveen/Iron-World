@@ -183,50 +183,6 @@
             
         </article>
 
-        <div id="call-modal" style="display: none;">
-            <div onclick="callForm()" class="modal-blur"></div>
-            <div class="modal-container-bonus">
-                <div class="modal-block">
-                    <div onclick="callForm()" class="modal-close"> <use href="#close"><img src="pict/krest.svg"></use></div>
-                    <h1>Обратная связь</h1>
-
-                    <form method="get" class="modal-form">    
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <input required type="text" name="Имя" pattern="[A-Za-zА-Яа-яЁё]{,2}" />
-                            <label for="Имя">Имя</label>
-                          </div>
-                          <div class="grid-input">
-                            <input required type="text" name="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{,2}" />
-                            <label for="Фамилия">Фамилия</label>
-                          </div>  
-                        </div>
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <input required type="tel" name="Телефон" />
-                            <label for="Телефон">Телефон</label>
-                          </div>
-                          <div class="grid-input">
-                            <input required type="email" id="email" name="почта" />
-                            <label for="почта">Почта</label>
-                          </div> 
-                        </div>
-
-                        <div class="grid-modal-enter">
-                          <div class="grid-input">
-                            <textarea id="Сообщение" required></textarea>
-                            <label for="Сообщение">Напишите ваше сообщение</label>
-                          </div>
-                        </div>
-
-                        <button type="submit">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
         <div id="enter-modal" style="display: none;">
             <div onclick="enterForm()" class="modal-blur"></div>
             <div class="modal-container">
@@ -254,50 +210,39 @@
             </div>
         </div>
 
-
-        <div id="feedback-modal" style="display: none;">
-            <div onclick="feedbackForm()" class="modal-blur"></div>
+        <div id="register-modal" style="display: none;">
+            <div onclick="registrationForm()" class="modal-blur"></div>
             <div class="modal-container">
                 <div class="modal-block">
-                    <div onclick="feedbackForm()" class="modal-close"> <img src="pict/krest.svg"> </div>
-                    <form method="get" class="modal-form">
-                        <h1>Оставьте ваш отзыв</h1>
+                    <div onclick="registrationForm()" class="modal-close"> 
+                        <img src="pict/krest.svg"> 
+                    </div>
+                    <form id="login" class="modal-form">
+                        <h1>Регистрация</h1>
                         <div>
-                            <textarea cols="30" rows="4" maxlength="300" minlength="10" required placeholder="Ваш отзыв"></textarea>
-                        </div>
-                        <div class="modal-radio">
-                            <fieldset>
-                                <legend>Оцените качество сайта от 1 до 5</legend>
-                            <input type="radio" name="Выбор" id="1-point">
-                            <label for="1-point">1</label>
-                            <input type="radio" name="Выбор" id="2-point">
-                            <label for="2-point">2</label>
-                            <input type="radio" name="Выбор" id="3-point">
-                            <label for="3-point">3</label>
-                            <input type="radio" name="Выбор" id="4-point">
-                            <label for="4-point">4</label>
-                            <input type="radio" checked name="Выбор" id="5-point">
-                            <label for="5-point">5</label> 
-                            </fieldset>
-                            
+                            <input id="emailInputRegistr" type="email" name="Почту" placeholder="Введите почту" />
                         </div>
                         <div>
-                            <p>Приложите фото вашего пк, заказанного у нас</p>
-                            <div class="input-file">
-                                <input type="file" name="Файл" placeholder="Добавьте файл">
-                            </div>
+                            <input id="passwordInputRegistr1" type="password" name="пароль" placeholder="Введите пароль">
                         </div>
-                        <button type="submit">Отправить</button>
+                        <div>
+                            <input id="passwordInputRegistr2" type="password" name="пароль" placeholder="Подтвердите пароль">
+                        </div>
+                        <div style="display: flow">
+                            <button id="regButton">Зарегестрироваться</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
+        <div id="thxForSale" style="display: none;">
+            <div class="modal-container">
+                <div class="modal-block">
+                    <h1>Спасибо за покупку!</h1>
+                </div>
+            </div>
+        </div>
     </main>
-    <aside class="video-panel">
-            <h3>Интересное</h3>
-            <!-- <iframe width="230" src="https://www.youtube.com/embed/x2stZoKpSbA?si=2Kz2uid920uEDavQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="230" src="https://www.youtube.com/embed/UWqD8wz6lE4?si=bKDNtVrYFVJ_Kt6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-    </aside>
     <footer>
        <div class="grid-foot">
             <div class="block-foot">

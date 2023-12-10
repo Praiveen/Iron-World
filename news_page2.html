@@ -171,7 +171,7 @@
             
         </article>
 
-        <div id="enter-modal" style="display: none;">
+                <div id="enter-modal" style="display: none;">
             <div onclick="enterForm()" class="modal-blur"></div>
             <div class="modal-container">
                 <div class="modal-block">
@@ -197,12 +197,40 @@
                 </div>
             </div>
         </div>
+
+        <div id="register-modal" style="display: none;">
+            <div onclick="registrationForm()" class="modal-blur"></div>
+            <div class="modal-container">
+                <div class="modal-block">
+                    <div onclick="registrationForm()" class="modal-close"> 
+                        <img src="pict/krest.svg"> 
+                    </div>
+                    <form id="login" class="modal-form">
+                        <h1>Регистрация</h1>
+                        <div>
+                            <input id="emailInputRegistr" type="email" name="Почту" placeholder="Введите почту" />
+                        </div>
+                        <div>
+                            <input id="passwordInputRegistr1" type="password" name="пароль" placeholder="Введите пароль">
+                        </div>
+                        <div>
+                            <input id="passwordInputRegistr2" type="password" name="пароль" placeholder="Подтвердите пароль">
+                        </div>
+                        <div style="display: flow">
+                            <button id="regButton">Зарегестрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="thxForSale" style="display: none;">
+            <div class="modal-container">
+                <div class="modal-block">
+                    <h1>Спасибо за покупку!</h1>
+                </div>
+            </div>
+        </div>
     </main>
-    <aside class="video-panel">
-            <h3>Интересное</h3>
-            <!-- <iframe width="230" src="https://www.youtube.com/embed/x2stZoKpSbA?si=2Kz2uid920uEDavQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="230" src="https://www.youtube.com/embed/UWqD8wz6lE4?si=bKDNtVrYFVJ_Kt6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-    </aside>
     <footer>
        <div class="grid-foot">
             <div class="block-foot">

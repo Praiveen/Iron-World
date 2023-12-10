@@ -1,6 +1,6 @@
 p, legend, option, a, li{
 	font-family: 'PT Sans Caption', sans-serif;
-	font-size: clamp(9px, 1.6vw, 15px);
+	font-size: clamp(11px, 1.6vw, 15px);
 }
 
 a{
@@ -20,19 +20,6 @@ a{
   }
 }
 
-/*@media screen and (max-width: 800px) {
-  p, legend, option{
-     font-size: clamp(9px, 1.6vw, 15px);
-  }
-}*/
-
-/*@media screen and (max-width: 800px) {
-  a{
-     font-size: 10px;
-  }
-}*/
-
-
 :root {
 	--main-size: calc(0.1em + 5vw);
 }
@@ -41,7 +28,7 @@ h1, h2, h3{
 	font-family: 'Alegreya SC', serif;
 	margin: 0;
 	padding: 0;
-	font-size: calc(0.5em + 1vw);
+	font-size: clamp(13px, 1.9vw, 30px);
 }
 
 a{
@@ -198,8 +185,8 @@ nav{
   transform: rotate(-405deg);
 }
 
+
 #menu-toggle:checked ~ .nav-menu{
-  transform: none;
   visibility: visible;
   opacity: 1;
 }
@@ -217,33 +204,40 @@ nav{
 	}
 	.nav-menu
 	{
-
 		display: flex;
+		visibility: hidden;
+		opacity: 0;
 		flex-direction: column;
 	  position: absolute;
 	  right: 0;
 	  top: 0;
 		padding: 30px;
 	  padding-top: 80px;
-	  background: white;
-	  margin: 0 auto;
+	  border-radius: 3px;
+		background: rgba(255, 255, 255, 0.28);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(16.8px);
+		-webkit-backdrop-filter: blur(16.8px);
+			  margin: 0 auto;
 	  border-radius: 10px;
 	  border: 7px solid #13315A;
 	  list-style-type: none;
+	  width: 60%;
+	  height: 70%;
 
-	  transform-origin: 0% 0%;
-	  transform: translate(100%, -100%);
-	  
-	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	  transition: all 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
 
 	.nav-menu a{
-		font-size: 14px;
+		display: flex;
+	  justify-content: center;
+	  align-items: center;
+		font-size: 24px;
 		background: #13315A;
  	  color: #BBC9DA;
-
 		width: 100%;
-		text-align: center;
+		height: 10%;
 		margin: 3px;
 	}
 }
@@ -284,6 +278,8 @@ nav{
   font-size: clamp(13px, 1.2vw, 18px);
   transition: color 0.2s, background 0.5s;
   margin: 1px;
+  position: sticky;
+  top: 0;
 }
 
 .menu-item-main .menu-item a{
@@ -420,7 +416,7 @@ nav{
 /*Основной*/
 
 .base-container{
-	grid-column: 3 / span 11;
+	grid-column: 3 / span 15;
 }
 
 @media screen and (max-width: 800px) {
@@ -439,18 +435,19 @@ nav{
 .window-1, .window-2, .window-3, .window-4{
 	margin: 0;
 	padding: 0;
-	height: 150px;
+
 	width: 150px;
 	border-radius: 10px;
 	margin: 5px;
 	flex-grow: 0;
-	padding: 20px;
+	padding: 25px;
 	cursor: pointer;
 	color: black;
 }
 
 .window-4 a{
 	color: black;
+	font-size: 15px;
 }
 
 .window-1{
@@ -482,13 +479,13 @@ nav{
 @media (max-width: 1400px){
 	.window-1{
 		flex-basis: 60em;
-		height: 100px;
+
 		padding: 10px;
 		padding-left: 15px;
 	}
 	.window-2, .window-3, .window-4{
 		flex-grow: 1;
-		height: 100px;
+
 		padding: 10px;
 	}
 
@@ -496,7 +493,7 @@ nav{
 
 @media (max-width: 800px){
 	.window-1, .window-2, .window-3, .window-4{
-		height: 60px;
+
 		padding: 5px;
 	}
 	.window-2, .window-3, .window-4{
@@ -665,6 +662,12 @@ nav{
 		text-align: center;
 	  transition: opacity 2s;
 	  font-size: 12px;
+	}
+
+
+	.notification:hover .notif-total{
+		top: -10px;
+		right: 3px;
 	}
 
 }
@@ -843,6 +846,20 @@ nav{
 	z-index: 100;
 }
 
+#thxForSale{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+
+#thxForSale .modal-block{
+	border: 3px solid orange;
+}
+
 .modal-blur{
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.50);
@@ -865,8 +882,7 @@ nav{
 	top: 50%;
 	transform: translate(0, -50%);
 	margin: auto auto auto auto;
- width: clamp(17rem, 40vw, 35rem);
-/*	width: clamp(10rem, 15rem, 40rem);*/
+ 	width: clamp(17rem, 40vw, 35rem);
 
 	transition: opacity 0.3s ease;
 }
@@ -1582,6 +1598,10 @@ footer{
 	.img-container .caption .product-price{
 		font-size: 15px;
 	}
+	.img-container .caption h1{
+		font-size: 15px;
+	}
+
 }
 
 

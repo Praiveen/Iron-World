@@ -190,7 +190,7 @@
         </article>
 
 
-         <div id="enter-modal" style="display: none;">
+                 <div id="enter-modal" style="display: none;">
             <div onclick="enterForm()" class="modal-blur"></div>
             <div class="modal-container">
                 <div class="modal-block">
@@ -200,23 +200,22 @@
                     <form id="login" class="modal-form">
                         <h1>Вход</h1>
                         <div>
-                            <input id="emailInput" type="email" name="Почту" placeholder="Введите почту" />
+                            <input type="email" name="Почту" placeholder="Введите почту" />
                         </div>
                         <div>
-                            <input id="passwordInput" type="password" name="пароль" placeholder="Введите пароль">
+                            <input type="password" name="пароль" placeholder="Введите пароль">
                         </div>
                         <div style="display: flow">
-                            <button id="enterButton">Войти</button>
+                            <button type="submit" onclick="task2()">Войти</button>
                         </div>
                         <div class="register-form">
                             <p>Нет учетной записи?</p>
-                            <button  onclick="registrationForm()" type="submit" >Зарегестрироваться</button>
+                            <button type="submit" onclick="task1()">Зарегестрироваться</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
 
         <div id="register-modal" style="display: none;">
             <div onclick="registrationForm()" class="modal-blur"></div>
@@ -226,7 +225,7 @@
                         <img src="pict/krest.svg"> 
                     </div>
                     <form id="login" class="modal-form">
-                        <h1>Входsssssss</h1>
+                        <h1>Регистрация</h1>
                         <div>
                             <input id="emailInputRegistr" type="email" name="Почту" placeholder="Введите почту" />
                         </div>
@@ -243,13 +242,15 @@
                 </div>
             </div>
         </div>
+        <div id="thxForSale" style="display: none;">
+            <div class="modal-container">
+                <div class="modal-block">
+                    <h1>Спасибо за покупку!</h1>
+                </div>
+            </div>
+        </div>
 
     </main>
-    <aside class="video-panel">
-            <h3>Интересное</h3>
-            <iframe width="230" src="https://www.youtube.com/embed/x2stZoKpSbA?si=2Kz2uid920uEDavQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="230" src="https://www.youtube.com/embed/UWqD8wz6lE4?si=bKDNtVrYFVJ_Kt6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </aside>
     <footer>
        <div class="grid-foot">
             <div class="block-foot">

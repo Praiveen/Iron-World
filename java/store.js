@@ -2,7 +2,7 @@
 let cartTotal = 0;
 const cartDom = document.querySelector(".cart");
 const cartTotalObjects = document.querySelector(".cart-img-block");
-
+var modal = document.getElementById("thxForSale");
 var addtocartbtnDom = document.querySelectorAll('[data-action="add-to-cart"]');
 
 let usersString = localStorage.getItem('store');
@@ -20,8 +20,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
       price: productDom.querySelector(".product-price").innerText,
       quantity: 1
     };
-
-    //cart.push(product);
 
     const IsinCart = cart.filter(cartItem => cartItem.name === product.name).length > 0;
     //const IsinCart = false;
@@ -166,7 +164,21 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
             document.querySelector('.relat-img-cart-total-objects').remove();
             document.querySelector('.cartCostOnMain').innerText = "Корзина";
             localStorage.setItem('store', JSON.stringify(cart));
-            //storage.setItem('cartt', cart);
+          });
+          document.querySelector('[data-action="check-out"]').addEventListener("click" , () => {
+            thx();
+            cartItemDom.remove();
+            cart = [];
+            cartTotal = 0;
+            if(document.querySelector('.cart-footer') !== null){
+              document.querySelector('.cart-footer').remove();
+
+            }
+            addtocartbtnDom.innerText = "Купить";
+            addtocartbtnDom.disabled = false;
+            document.querySelector('.relat-img-cart-total-objects').remove();
+            document.querySelector('.cartCostOnMain').innerText = "Корзина";
+            localStorage.setItem('store', JSON.stringify(cart));
           });
         }
       });
@@ -174,6 +186,11 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
   });
 });
 
+
+function thx(){
+  document.getElementById("thxForSale").style.display = "block";
+  setTimeout(function() { modal.style.display = "none"; }, 5000);
+}
 
 document.getElementById("cartImage").addEventListener("click", function() {
   var storage = document.getElementById("storage");

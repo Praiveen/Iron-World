@@ -1,5 +1,5 @@
 body, html {
-  height: clamp(190%, 330vw, 250%);
+  height: clamp(210%, 330vw, 250%);
   width: 100%;
   margin: 0;
 }
