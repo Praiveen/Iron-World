@@ -225,6 +225,7 @@ nav{
 	  list-style-type: none;
 	  width: 60%;
 	  height: 70%;
+	  z-index: 10;
 
 	  transition: all 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
@@ -267,7 +268,7 @@ nav{
 
 .panel-min-800{
 	display: none;
-	z-index: 20;
+	z-index: 5;
 }
 
 .menu-item-main a{

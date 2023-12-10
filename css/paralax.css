@@ -1,5 +1,5 @@
 body, html {
-  height: clamp(210%, 330vw, 250%);
+  height: clamp(220%, 330vw, 250%);
   width: 100%;
   margin: 0;
 }
@@ -63,7 +63,7 @@ body, html {
   width: clamp(17rem, 80vw, 45rem);
 
   position: absolute;
-  top: 27%;
+  top: 24%;
   left: 50%;
   text-align: center;
 }
@@ -83,7 +83,7 @@ body, html {
   width: clamp(17rem, 80vw, 45rem);
 
   position: absolute;
-  top: 61%;
+  top: 63%;
   left: 50%;
   text-align: center;
 }
@@ -96,7 +96,7 @@ body, html {
 .content5 {
   width: clamp(17rem, 80vw, 45rem);
   position: absolute;
-  top: 78%;
+  top: 80%;
   left: 50%;
   text-align: center;
 }
