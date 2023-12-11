@@ -444,6 +444,7 @@ nav{
 	padding: 25px;
 	cursor: pointer;
 	color: black;
+
 }
 
 .window-4 a{
@@ -454,6 +455,7 @@ nav{
 .window-1{
 	display: flex;
 	background: linear-gradient(to right, #fcfc6c, #fcfca1);
+	transition: background 0.2s;
 }
 
 .window-1:hover{
@@ -804,7 +806,7 @@ nav{
 }
 
 .recomendation li a{
-	color: #c9c9c9;
+	color: #6688cc;
 	transition: all 0.2s;
 }
 
@@ -1261,6 +1263,10 @@ footer{
 		justify-content: center;
 }
 
+.copyright{
+	text-align: center;
+}
+
 @media (max-width: 1000px){
 	.grid-foot{
 		grid-template-columns: repeat(2,1fr);
@@ -1670,7 +1676,7 @@ footer{
 .form-group input[type="email"],
 .form-group input[type="tel"],
 .form-group select {
-    width: 30%;
+    width: 60%;
     height: 30px;
 
     font-size: 1rem;
@@ -1763,4 +1769,22 @@ footer{
 
 .outButtonBlock{
 	padding: 20px;
+}
+
+#saveButton,  #outButton{
+   background-color: orange; 
+   border: none; 
+   color: black; 
+   padding: 15px 32px; 
+   text-align: center; 
+   text-decoration: none;
+   display: inline-block; 
+   font-size: 16px;
+   transition-duration: 0.4s; 
+   cursor: pointer;
+}
+
+#saveButton:hover, #outButton:hover {
+   background-color: #ff6f3c; 
+   color: white; 
 }

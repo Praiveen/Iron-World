@@ -1,13 +1,8 @@
-
 if (localStorage.getItem('loggedIn') === 'true') {
 	document.getElementById('loginButton').innerText = 'Личный кабинет';
 	document.getElementById('loginButton').href = 'user_page.html';
 	document.getElementById('loginButton').removeAttribute("onclick");
 }
-
-//var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-
 
 let users = [
  {email: 'user1@example.com', password: 'pass1', phone: '',
@@ -30,8 +25,6 @@ let users = [
 	},
 ];
 
-
-// Функция для обработки входа в систему
 function handleLogin() {
 	let users = JSON.parse(localStorage.getItem('users'));
 	var email = document.getElementById('emailInput').value;
@@ -50,10 +43,7 @@ function handleLogin() {
 	   alert('Неверный email или пароль');
 	}
 }
-
-// Добавляем обработчик события на кнопку входа
 document.getElementById('enterButton').addEventListener('click', handleLogin);
-
 
 document.getElementById('outButton').addEventListener('click', function out(){
 	localStorage.setItem('loggedIn', 'false');
@@ -74,11 +64,10 @@ function ttxUser() {
      	document.getElementById('nameInput').value = user.name;
      	document.getElementById('surnameInput').value = user.surname;
      	document.getElementById('nicknameInput').value = user.nickname;
-		document.getElementById('field1Input').checked = user.field1;
-		document.getElementById('field2Input').checked = user.field2;
-		document.getElementById('field3Input').checked = user.field3;
-		document.getElementById('field4Input').checked = user.field4;
-
+			document.getElementById('field1Input').checked = user.field1;
+			document.getElementById('field2Input').checked = user.field2;
+			document.getElementById('field3Input').checked = user.field3;
+			document.getElementById('field4Input').checked = user.field4;
      break;
    }
  }
@@ -105,10 +94,6 @@ function saveChanges() {
 
  alert('Не удалось сохранить изменения');
 }
-
-// Получаем кнопку по ее ID
 var saveButton = document.getElementById("saveButton");
-
-// Добавляем обработчик события на кнопку
 saveButton.addEventListener('click', saveChanges);
 

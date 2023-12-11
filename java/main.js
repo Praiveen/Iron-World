@@ -12,6 +12,10 @@ window.addEventListener('scroll', function() {
 
 var likeButton = document.querySelector('.news_like_button');
 var image = document.querySelector('.news_like_button img');
+var number = 1;
+var what = false;
+var disp = document.getElementById("display");
+
 
 likeButton.addEventListener('click', function() {
     likeButton.classList.toggle('clicked');
@@ -21,17 +25,6 @@ likeButton.addEventListener('click', function() {
     else {
         image.src = 'pict/news_page1/heart-svgrepo-com.svg';
     }
-});
-
-
-
-var number = 1;
-var what = false;
-var likeBut = document.querySelector(".news_like_button");
-var disp = document.getElementById("display");
-
-likeBut.addEventListener("click", function() {
-  
     if (what) {
         number -= 1;
     } 
@@ -42,19 +35,4 @@ likeBut.addEventListener("click", function() {
     what = !what;
   
     disp.innerHTML = number;
-});
-
-document.getElementById('cartImage').addEventListener('click', function() {
-    var popupBlock = document.getElementById('popupBlock');
-    var cartImage = document.getElementById('cartImage');
-    
-    // Получение позиции изображения
-    var imagePosition = cartImage.getBoundingClientRect();
-    
-    // Установка позиции блока
-    popupBlock.style.left = imagePosition.left + 'px';
-    popupBlock.style.top = (imagePosition.top + imagePosition.height) + 'px';
-    
-    // Показ блока
-    popupBlock.style.display = 'block';
 });

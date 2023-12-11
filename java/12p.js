@@ -12,7 +12,6 @@ function incrementCounter() {
        </div>
     `);
 
-
     if(counterr == 1){
        notifTotalObjects.insertAdjacentHTML("beforeend",`
        <p class="notif-total">${counterr}</p>
@@ -28,4 +27,5 @@ function incrementCounter() {
  }
 
 
-intervalId = setInterval(incrementCounter, 3000);
+intervalId = setInterval(incrementCounter, 10000);
+

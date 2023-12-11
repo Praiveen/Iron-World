@@ -1,13 +1,11 @@
 
-let cartTotal = 0;
-const cartDom = document.querySelector(".cart");
-const cartTotalObjects = document.querySelector(".cart-img-block");
+var cartTotal = 0;
+var cartDom = document.querySelector(".cart");
+var cartTotalObjects = document.querySelector(".cart-img-block");
 var modal = document.getElementById("thxForSale");
 var addtocartbtnDom = document.querySelectorAll('[data-action="add-to-cart"]');
 
-let usersString = localStorage.getItem('store');
-//let cart = JSON.parse(usersString) || [];
-
+var usersString = localStorage.getItem('store');
 cart = []; 
 
 
@@ -22,8 +20,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
     };
 
     const IsinCart = cart.filter(cartItem => cartItem.name === product.name).length > 0;
-    //const IsinCart = false;
-
     if (IsinCart === false) {
       cartDom.insertAdjacentHTML("beforeend",`
       <div class="cart-items">
@@ -80,12 +76,7 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
 
       addtocartbtnDom.innerText = "В корзине";
       addtocartbtnDom.disabled = true;
-      //alert(cart);
-      //console.log(typeof cart);
       cart.push(product);
-      localStorage.setItem('store', JSON.stringify(cart));
-      //storagee.setItem('cartt', cart);
-      //localStorage.setItem ("object", JSON.stringify("cart"));
 
       const cartItemsDom = cartDom.querySelectorAll(".cart-items");
       cartItemsDom.forEach(cartItemDom => {
@@ -106,8 +97,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
                 cartTotal += parseInt(cartItem.price)
                 document.querySelector('.pay').innerText = cartTotal + " ₽";
                 document.querySelector('.cartCostOnMain').innerText = cartTotal + " ₽";
-                localStorage.setItem('store', JSON.stringify(cart));
-                //storage.setItem('cartt', cart);
               }
             });
           });
@@ -122,8 +111,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
                   cartTotal -= parseInt(cartItem.price)
                   document.querySelector('.pay').innerText = cartTotal + " ₽";
                   document.querySelector('.cartCostOnMain').innerText = cartTotal + " ₽";
-                  localStorage.setItem('store', JSON.stringify(cart));
-                  //storage.setItem('cartt', cart);
                 }
               }
             });
@@ -140,8 +127,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
                   cart = cart.filter(cartItem => cartItem.name !== product.name);
                   addtocartbtnDom.innerText = "Купить";
                   addtocartbtnDom.disabled = false;
-                  localStorage.setItem('store', JSON.stringify(cart));
-                  //storage.setItem('cartt', cart);
               }
               if(cart.length < 1){
                 document.querySelector('.cart-footer').remove();
@@ -163,7 +148,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
             addtocartbtnDom.disabled = false;
             document.querySelector('.relat-img-cart-total-objects').remove();
             document.querySelector('.cartCostOnMain').innerText = "Корзина";
-            localStorage.setItem('store', JSON.stringify(cart));
           });
           document.querySelector('[data-action="check-out"]').addEventListener("click" , () => {
             thx();
@@ -178,7 +162,6 @@ addtocartbtnDom.forEach(addtocartbtnDom => {
             addtocartbtnDom.disabled = false;
             document.querySelector('.relat-img-cart-total-objects').remove();
             document.querySelector('.cartCostOnMain').innerText = "Корзина";
-            localStorage.setItem('store', JSON.stringify(cart));
           });
         }
       });

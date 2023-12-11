@@ -1,4 +1,3 @@
-
 function enterForm() {
     if (document.getElementById("enter-modal").style.display == "none") {
         document.getElementById("enter-modal").style.display = "block";
@@ -15,3 +14,4 @@ function registrationForm() {
         document.getElementById("register-modal").style.display = "none";
     }
 }
+
