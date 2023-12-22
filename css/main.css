@@ -1457,7 +1457,7 @@ footer{
 		align-items: center;
 	}
 	.storage{
-		width: 350px;
+		width: 320px;
 	}
 	.relat-img-cart-total-objects{
 		top: -5px;
@@ -1469,7 +1469,15 @@ footer{
 		padding: 0;
 		font-size: 13px;
 	}
-	
+	.store-flex-box-inside3{
+		width: 60%;
+	}
+	.store-flex-box-inside4{
+		width: 40%;
+	}
+	.cart-footer .store-btn{
+		margin: 0 10px 0 10px;
+	}
 }
 
 

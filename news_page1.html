@@ -191,19 +191,21 @@
                     <form id="login" class="modal-form">
                         <h1>Вход</h1>
                         <div>
-                            <input type="email" name="Почту" placeholder="Введите почту" />
+                            <input id="emailInput" type="email" name="Почту" placeholder="Введите почту" />
                         </div>
                         <div>
-                            <input type="password" name="пароль" placeholder="Введите пароль">
+                            <input id="passwordInput" type="password" name="пароль" placeholder="Введите пароль">
                         </div>
                         <div style="display: flow">
-                            <button type="submit" onclick="task2()">Войти</button>
+                            <button id="enterButton">Войти</button>
                         </div>
-                        <div class="register-form">
-                            <p>Нет учетной записи?</p>
-                            <button type="submit" onclick="task1()">Зарегестрироваться</button>
-                        </div>
+                        
                     </form>
+                    <div class="register-form modal-form">
+                        <p>Нет учетной записи?</p>
+                        <button onclick="registrationForm()" type="submit" >Зарегестрироваться</button>
+                    </div>
+
                 </div>
             </div>
         </div>

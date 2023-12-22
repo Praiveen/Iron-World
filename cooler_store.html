@@ -146,7 +146,7 @@
                         <h1 class="product-name">ARCTIC Liquid Freezer II-360 A-RGB </h1>
                         <p class="product-ttx">Характеристики <br>
                         Совместимость: Intel/AMD <br>
-                        Socket: AM4, s1150, s1151, s1155, s1156, s1200, s1700, s2011-3 (Square ILM), s2066 (Square ILM), AM5 <br>
+                        Socket: AM4, s1150, s1200, s1700, s2011-3 (Square ILM), s2066 (Square ILM), AM5 <br>
                         Материал радиатора: алюминий+медь <br>
                         Количество вентиляторов: 3 <br>
                         Размеры вентилятора: 120x120x25 мм <br>
@@ -194,7 +194,7 @@
                     <div class="caption">
                         <h1 class="product-name">ID-Cooling SE-207-XT BLACK</h1>
                         <p class="product-ttx">Характеристики <br>
-                        Socket: s2011, s2011-3, AM4, s2066, s1200, s1700, s115X <br>
+                        Socket: s2011, s2011-3, s1700, s115X <br>
                         Совместимость: Intel/AMD <br>
                         Максимальное тепловыделение <br>процессора (TDP): 280 Вт <br>
                         Тип:воздушное <br>
@@ -224,7 +224,7 @@
                     <div class="caption">
                         <h1 class="product-name">DeepCool AK620 DIGITAL</h1>
                         <p class="product-ttx">Характеристики <br>
-                        Socket: s2011, s2011-3, AM4, s2066, s1200, s1700, AM5, s115X <br>
+                        Socket: s2011, s2011-3, AM4, s2066, AM5, s115X <br>
                         Совместимость: Intel/AMD <br>
                         Максимальное тепловыделение процессора (TDP): 260 Вт <br>
                         Тип: воздушное <br>
@@ -236,6 +236,8 @@
                 </div>
             </section>
         </article>
+
+
         <div id="enter-modal" style="display: none;">
             <div onclick="enterForm()" class="modal-blur"></div>
             <div class="modal-container">
@@ -246,19 +248,21 @@
                     <form id="login" class="modal-form">
                         <h1>Вход</h1>
                         <div>
-                            <input type="email" name="Почту" placeholder="Введите почту" />
+                            <input id="emailInput" type="email" name="Почту" placeholder="Введите почту" />
                         </div>
                         <div>
-                            <input type="password" name="пароль" placeholder="Введите пароль">
+                            <input id="passwordInput" type="password" name="пароль" placeholder="Введите пароль">
                         </div>
                         <div style="display: flow">
-                            <button type="submit" onclick="task2()">Войти</button>
+                            <button id="enterButton">Войти</button>
                         </div>
-                        <div class="register-form">
-                            <p>Нет учетной записи?</p>
-                            <button type="submit" onclick="task1()">Зарегестрироваться</button>
-                        </div>
+                        
                     </form>
+                    <div class="register-form modal-form">
+                        <p>Нет учетной записи?</p>
+                        <button onclick="registrationForm()" type="submit" >Зарегестрироваться</button>
+                    </div>
+
                 </div>
             </div>
         </div>
